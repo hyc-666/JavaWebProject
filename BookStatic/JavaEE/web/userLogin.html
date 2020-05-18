@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录页面</title>
+</head>
+<body>
+    <form action="http://192.168.1.6:8080/JavaEE/loginServlet" method="post">
+        <h3 align="center">用户登陆</h3>
+        <table align="center" cellspacing="5">
+            <tr>
+                <td>用户名称：</td>
+                <td><input name="username" type="text" value="在此输入用户名"/></td>
+            </tr>
+            <tr>
+                <td>用户密码：</td>
+                <td><input name="password" type="password"/></td>
+            </tr>
+            <tr>
+                <td><button type="reset">还原</button> </td>
+                <td><button type="submit">登陆</button> </td>
+            </tr>
+            </table>
+    </form>
+
+    <a href="index.jsp">返回首页</a>
+</body>
+</html>
