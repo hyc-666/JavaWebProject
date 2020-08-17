@@ -17,12 +17,12 @@ public class LoginServlet extends HttpServlet {
      * 比如这里需要完成登陆验证功能，登陆信息含有密码，一般使用post方法，那么就重写doPost方法
      * 此外，在web.xml文件中配置servlet程序访问地址
      * <servlet>
-     *         <servlet-name>LoginServlet</servlet-name> <!--一般是给servlet程序取一个别名，一般是类名--></>
-     *         <servlet-class>javaEE.LoginServlet</servlet-class><!--写类的全名，包名也要带上--></>
+     *         <servlet-name>LoginServlet</servlet-name> <!--一般是给servlet程序取一个别名，一般是类名--><br/>
+     *         <servlet-class>javaEE.LoginServlet</servlet-class><!--写类的全名，包名也要带上--><br/>
      *     </servlet>
-     *     <servlet-mapping><!--此处配置访问地址，与上面的配置信息要对应--></>
+     *     <servlet-mapping><!--此处配置访问地址，与上面的配置信息要对应--><br/>
      *         <servlet-name>LoginServlet</servlet-name>
-     *         <url-pattern>/loginServlet</url-pattern><!--这里对应到工程路径--></>
+     *         <url-pattern>/loginServlet</url-pattern><!--这里对应到工程路径--><br/>
      *     </servlet-mapping>
      */
 

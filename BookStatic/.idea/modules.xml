@@ -4,9 +4,15 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/06_servlet/06_servlet.iml" filepath="$PROJECT_DIR$/06_servlet/06_servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/07_servlet/07_servlet.iml" filepath="$PROJECT_DIR$/07_servlet/07_servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_jsp/08_jsp.iml" filepath="$PROJECT_DIR$/08_jsp/08_jsp.iml" />
       <module fileurl="file://$PROJECT_DIR$/BookStatic.iml" filepath="$PROJECT_DIR$/BookStatic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaEE/JavaEE.iml" filepath="$PROJECT_DIR$/JavaEE/JavaEE.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebTomcat/WebTomcat.iml" filepath="$PROJECT_DIR$/WebTomcat/WebTomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/book/book.iml" filepath="$PROJECT_DIR$/book/book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file/file.iml" filepath="$PROJECT_DIR$/file/file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java15_chess/java15_chess.iml" filepath="$PROJECT_DIR$/../java15_chess/java15_chess.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet/servlet.iml" filepath="$PROJECT_DIR$/servlet/servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
 </project>
