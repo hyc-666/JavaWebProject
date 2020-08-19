@@ -30,7 +30,9 @@
 								<span class="errorMsg"><%=request.getAttribute("msg")==null?"请输入用户名":request.getAttribute("msg")%></span>
 							</div>
 							<div class="form">
-								<form action="loginServlet" method="post">
+								<form action="userServlet" method="post">
+									<!-- 在页面添加隐藏域，在服务端区分是什么请求 -->
+									<input type="hidden" name="action" value="login">
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名"
 										   autocomplete="off" tabindex="1" name="username"
