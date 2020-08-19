@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,20 +23,24 @@
 						<div class="login_box">
 							<div class="tit">
 								<h1>尚硅谷会员</h1>
-								<a href="pages/user/regist.html">立即注册</a>
+								<a href="pages/user/regist.jsp">立即注册</a>
 							</div>
 							<div class="msg_cont">
 								<b></b>
-								<span class="errorMsg">请输入用户名和密码</span>
+								<span class="errorMsg"><%=request.getAttribute("msg")==null?"请输入用户名":request.getAttribute("msg")%></span>
 							</div>
 							<div class="form">
 								<form action="loginServlet" method="post">
 									<label>用户名称：</label>
-									<input class="itxt" type="text" placeholder="请输入用户名" autocomplete="off" tabindex="1" name="username" />
+									<input class="itxt" type="text" placeholder="请输入用户名"
+										   autocomplete="off" tabindex="1" name="username"
+										   value="<%=request.getAttribute("username")==null?"":request.getAttribute("username")%>"
+									/>
 									<br />
 									<br />
 									<label>用户密码：</label>
-									<input class="itxt" type="password" placeholder="请输入密码" autocomplete="off" tabindex="1" name="password" />
+									<input class="itxt" type="password" placeholder="请输入密码"
+										   autocomplete="off" tabindex="1" name="password" />
 									<br />
 									<br />
 									<input type="submit" value="登录" id="sub_btn" />
@@ -46,10 +51,7 @@
 					</div>
 				</div>
 			</div>
-		<div id="bottom">
-			<span>
-				尚硅谷书城.Copyright &copy;2015
-			</span>
-		</div>
+		<%@include file="/pages/common/feet.jsp"%>
+
 </body>
 </html>

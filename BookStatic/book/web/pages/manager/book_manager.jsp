@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,16 +7,13 @@
 <link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
 </head>
 <body>
-	
-	<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
-			<span class="wel_word">图书管理系统</span>
-			<div>
-				<a href="book_manager.html">图书管理</a>
-				<a href="order_manager.html">订单管理</a>
-				<a href="../../index.html">返回商城</a>
-			</div>
-	</div>
+
+<div id="header">
+	<img class="logo_img" alt="" src="../../static/img/logo.gif" >
+	<span class="wel_word">图书管理系统</span>
+	<%@include file="/pages/common/manager_menu.jsp"%>
+
+</div>
 	
 	<div id="main">
 		<table>
@@ -33,7 +31,7 @@
 				<td>霍金</td>
 				<td>200</td>
 				<td>400</td>
-				<td><a href="book_edit.html">修改</a></td>
+				<td><a href="book_edit.jsp">修改</a></td>
 				<td><a href="#">删除</a></td>
 			</tr>	
 			
@@ -43,7 +41,7 @@
 				<td>霍金</td>
 				<td>200</td>
 				<td>400</td>
-				<td><a href="book_edit.html">修改</a></td>
+				<td><a href="book_edit.jsp">修改</a></td>
 				<td><a href="#">删除</a></td>
 			</tr>	
 			
@@ -53,7 +51,7 @@
 				<td>霍金</td>
 				<td>200</td>
 				<td>400</td>
-				<td><a href="book_edit.html">修改</a></td>
+				<td><a href="book_edit.jsp">修改</a></td>
 				<td><a href="#">删除</a></td>
 			</tr>	
 			
@@ -63,7 +61,7 @@
 				<td>霍金</td>
 				<td>200</td>
 				<td>400</td>
-				<td><a href="book_edit.html">修改</a></td>
+				<td><a href="book_edit.jsp">修改</a></td>
 				<td><a href="#">删除</a></td>
 			</tr>	
 			
@@ -74,15 +72,12 @@
 				<td></td>
 				<td></td>
 				<td></td>
-				<td><a href="book_edit.html">添加图书</a></td>
+				<td><a href="book_edit.jsp">添加图书</a></td>
 			</tr>	
 		</table>
 	</div>
-	
-	<div id="bottom">
-		<span>
-			尚硅谷书城.Copyright &copy;2015
-		</span>
-	</div>
+
+	<%@include file="/pages/common/feet.jsp"%>
+
 </body>
 </html>
