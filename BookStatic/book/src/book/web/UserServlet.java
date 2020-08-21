@@ -61,6 +61,8 @@ public class UserServlet extends BaseServlet {
         String password = req.getParameter("password");
         String email = req.getParameter("email");
         String code = req.getParameter("code");
+
+
         //2、检查验证码是否正确,目前验证码固定为“abcde”
         if ("abcde".equalsIgnoreCase(code)){//验证码需要忽略大小写
 
