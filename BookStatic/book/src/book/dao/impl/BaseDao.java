@@ -74,7 +74,7 @@ public abstract class BaseDao {
     }
 
     /**
-     * 查询执行反不会一列的sql语句
+     * 查询执行返回一列的sql语句
      * @param sql sql语句
      * @param args sql语句参数
      * @return 返回查询结果的一列
