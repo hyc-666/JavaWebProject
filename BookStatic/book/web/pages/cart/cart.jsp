@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <title>购物车</title>
-<base href="http://localhost:8080/BookStore02/">
-<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<%--静态包含头不内容--%>
+	<%@include file="/pages/common/head.jsp"%>
 </head>
 <body>
 	
@@ -59,7 +59,7 @@
 		</div>
 	
 	</div>
-
+	<!-- 静态包含页脚内容 -->
 	<%@include file="/pages/common/feet.jsp"%>
 
 </body>

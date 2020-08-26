@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <title>我的订单</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+	<%--静态包含页面头不内容--%>
+	<%@include file="/pages/common/head.jsp"%>
 <style type="text/css">
 	h1 {
 		text-align: center;

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>编辑图书</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+<%@include file="/pages/common/head.jsp"%>
 <style type="text/css">
 	h1 {
 		text-align: center;
@@ -28,7 +28,8 @@
 		</div>
 		
 		<div id="main">
-			<form action="book_manager.jsp">
+			<form action="manager/bookServlet">
+				<input type="hidden" name="action" value="add">
 				<table>
 					<tr>
 						<td>名称</td>
@@ -39,11 +40,12 @@
 						<td colspan="2">操作</td>
 					</tr>		
 					<tr>
-						<td><input name="book_name" type="text" value="时间简史"/></td>
-						<td><input name="book_price" type="text" value="30.00"/></td>
-						<td><input name="book_author" type="text" value="霍金"/></td>
-						<td><input name="book_sales" type="text" value="200"/></td>
-						<td><input name="book_stock" type="text" value="300"/></td>
+						<!-- 需要属性名和javaBean的属性名对应 -->
+						<td><input name="name" type="text" value="时间简史"/></td>
+						<td><input name="price" type="text" value="30.00"/></td>
+						<td><input name="author" type="text" value="霍金"/></td>
+						<td><input name="sales" type="text" value="200"/></td>
+						<td><input name="stock" type="text" value="300"/></td>
 						<td><input type="submit" value="提交"/></td>
 					</tr>	
 				</table>
