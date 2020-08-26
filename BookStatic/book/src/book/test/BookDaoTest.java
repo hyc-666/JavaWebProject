@@ -17,8 +17,10 @@ public class BookDaoTest {
 
     @Test
     public void addBook() {
-        Book book = new Book(null,"Java封神之路",new BigDecimal(10),"胡逼瞎拽",15,68,null);
-        //这里，id是自增的，给null值没有问题，而img_path是有默认路径的，null值也不会报错，比能切在方法钟已经针对了null值进行了处理
+        Book book = new Book(null,"Java封神之路",
+                new BigDecimal(10),"胡逼瞎拽",15,68,null);
+        //这里，id是自增的，给null值没有问题，而img_path是有默认路径的，
+        // null值也不会报错，并且方法中已经针对了null值进行了处理
         bookDao.addBook(book);
     }
 

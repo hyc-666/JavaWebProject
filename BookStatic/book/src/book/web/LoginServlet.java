@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * 登陆和注册代码全都被UserServlet取代，这个代码没有作用了
  * @author hyc
  * @date 2020/5/18
  **/
+
 public class LoginServlet extends HttpServlet {
     private UserService userService = new UserServiceImpl();
     @Override

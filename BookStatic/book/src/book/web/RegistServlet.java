@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
+/** 此处的代码已经被UserServlet抽取合并，不再有用
  * @author hyc
  * @date 2020/5/17
  **/

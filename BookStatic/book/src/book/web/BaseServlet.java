@@ -14,9 +14,22 @@ import java.lang.reflect.Method;
  * @date 2020/8/19
  **/
 public abstract class BaseServlet extends HttpServlet {
+    /**
+     * jsp页面里a标签的默认请求方法是get方法，需要重写get方法，在get方法里调用post方法
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req,resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取请求的参数，区分请求的action，是注册还是登陆
+        resp.setCharacterEncoding("UTF-8");
 
         String action = req.getParameter("action");
 

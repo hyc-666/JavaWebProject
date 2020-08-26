@@ -27,7 +27,7 @@ public class Book {
         this.sales = sales;
         this.stock = stock;
         //图书封面的地址不能是空
-        if (img_path == null || img_path.length() <= 0){
+        if (img_path != null && img_path.length() > 0){
             this.img_path = img_path;
         }
     }
