@@ -29,7 +29,14 @@
 		
 		<div id="main">
 			<form action="manager/bookServlet">
-				<input type="hidden" name="action" value="add">
+				<!--  由于一个页面要完成图书添加和修改的操作，因此value的值要是动态变化的，不能写死
+				  	这里通过判断request域中是否有book的值来判断区分是修改操作还是添加操作
+				  	也就是说，如果是修改操作，请求会先经过bookServlet程序，并且在request域中是会存储一个图书信息的
+				  	而添加页面是直接跳转到book_edit.jsp页面的，request域中不含book的值
+				  -->
+				<input type="hidden" name="action" value="${empty requestScope.book ? "add" : "update"}">
+				<!--  修改图书要根据id的值来修改，因此在请求的参数里要把id也带上  -->
+				<input type="hidden" name="id" value="${requestScope.book.id}">
 				<table>
 					<tr>
 						<td>名称</td>
@@ -41,11 +48,11 @@
 					</tr>		
 					<tr>
 						<!-- 需要属性名和javaBean的属性名对应 -->
-						<td><input name="name" type="text" value="时间简史"/></td>
-						<td><input name="price" type="text" value="30.00"/></td>
-						<td><input name="author" type="text" value="霍金"/></td>
-						<td><input name="sales" type="text" value="200"/></td>
-						<td><input name="stock" type="text" value="300"/></td>
+						<td><input name="name" type="text" value="${requestScope.book.name}"/></td>
+						<td><input name="price" type="text" value="${requestScope.book.price}"/></td>
+						<td><input name="author" type="text" value="${requestScope.book.author}"/></td>
+						<td><input name="sales" type="text" value="${requestScope.book.sales}"/></td>
+						<td><input name="stock" type="text" value="${requestScope.book.stock}"/></td>
 						<td><input type="submit" value="提交"/></td>
 					</tr>	
 				</table>

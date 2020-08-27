@@ -43,7 +43,7 @@
 					<td>${book.author}</td>
 					<td>${book.sales}</td>
 					<td>${book.stock}</td>
-					<td><a href="pages/manager/book_edit.jsp">修改</a></td>
+					<td><a href="manager/bookServlet?action=getBook&id=${book.id}">修改</a></td>
 					<td><a class="deleteClass" href="manager/bookServlet?action=delete&id=${book.id}">删除</a></td>
 					<!--  通常，删除不会直接删除，二十要提示用户是否确定删除，给删除绑定单击事件  -->
 				</tr>

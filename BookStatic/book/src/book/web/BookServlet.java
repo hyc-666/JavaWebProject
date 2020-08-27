@@ -44,7 +44,27 @@ public class BookServlet extends BaseServlet {
         resp.sendRedirect(req.getContextPath() + "/manager/bookServlet?action=list");
     }
 
-    public void update(HttpServletRequest req, HttpServletResponse resp){}
+    public void update(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        //1.获取请求的参数并封装成为book对象
+        Book book = WebUtils.copyParamToBean(req.getParameterMap(),new Book());
+//        String id = req.getParameter("id");
+//        book.setId(Integer.parseInt(id));
+        //2.调用update方法提交修改
+        bookService.updateBook(book);
+        //请求重定向到图书管理页面
+        resp.sendRedirect( req.getContextPath() + "/manager/bookServlet?action=list");
+    }
+
+    public void getBook(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //1.点击修改的时候不能直接跳转到book_edit的页面，要先查询图书id，然后获取到图书信息
+        String id = req.getParameter("id");
+        Book book = bookService.queryBookById(Integer.parseInt(id));
+
+        //2.将图书信息保存到request域中，
+        req.setAttribute("book",book);
+        //3.将页面跳转到book_edit.jsp页面，通过回显显示出要修改的图书的信息。
+        req.getRequestDispatcher("/pages/manager/book_edit.jsp").forward(req,resp);
+    }
 
     public void list(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //1.通过BookService获取图书信息
